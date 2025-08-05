@@ -25,11 +25,6 @@
 - 在Xcode中打开`TestClaudeCode.xcodeproj`
 - 尝试构建以测试代码是否有编译问题：`xcodebuild -project TestClaudeCode.xcodeproj -scheme TestClaudeCode -configuration Debug -destination "generic/platform=iOS" -quiet clean build  && echo '** BUILD SUCCEEDED **'`
 
-### 测试
-- 运行单元测试：`xcodebuild test -scheme TestClaudeCodeTests -destination 'platform=iOS Simulator,name=iPhone 16' -quiet && echo '** TESTS SUCCEEDED **'`
-- 测试文件位于`TestClaudeCodeTests/`和`TestClaudeCodeUITests/`
-- 使用XCTest框架和Combine进行异步测试
-
 ### 代码检查
 - SwiftLint仅在Debug构建时配置
 - 配置文件：项目根目录下的`.swiftlint.yml`
@@ -38,14 +33,10 @@
 - 编码后要执行swiftlint检查代码问题
 - SwiftLint检查命令：`swiftlint`
 
-### 开发
-```bash
-# 在 Xcode 中打开项目
-open TestClaudeCode.xcodeproj
-
-# 归档用于分发
-xcodebuild -project TestClaudeCode.xcodeproj -scheme TestClaudeCode -archivePath TestClaudeCode.xcarchive archive
-```
+### 测试
+- 运行单元测试：`xcodebuild test -scheme TestClaudeCodeTests -destination 'platform=iOS Simulator,name=iPhone 16' -quiet && echo '** TESTS SUCCEEDED **'`
+- 测试文件位于`TestClaudeCodeTests/`和`TestClaudeCodeUITests/`
+- 使用XCTest框架和Combine进行异步测试
 
 ## 项目结构
 

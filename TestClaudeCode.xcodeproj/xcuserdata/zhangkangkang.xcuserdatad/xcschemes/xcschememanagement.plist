@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SnapKitPlayground (Playground).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>TestClaudeCode.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>TestClaudeCodeTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C2123EDC2E4227F900B776C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2123EF22E4227FA00B776C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2123EFC2E4227FA00B776C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
