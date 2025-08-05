@@ -72,7 +72,7 @@ class PopupView: UIView {
             make.center.equalToSuperview()
             make.left.greaterThanOrEqualToSuperview().offset(40)
             make.right.lessThanOrEqualToSuperview().offset(-40)
-            make.width.lessThanOrEqualTo(320)
+            make.width.greaterThanOrEqualTo(300)
         }
         
         titleLabel.snp.makeConstraints { make in
