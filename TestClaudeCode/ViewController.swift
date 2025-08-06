@@ -10,6 +10,7 @@ import SnapKit
 
 class ViewController: UIViewController {
     
+    private let showClockButton = UIButton(type: .system)
     private let showPopupButton = UIButton(type: .system)
     private let showCustomPopupButton = UIButton(type: .system)
     private let showMultiButtonPopupButton = UIButton(type: .system)
@@ -27,6 +28,12 @@ class ViewController: UIViewController {
     }
     
     private func setupButtons() {
+        showClockButton.setTitle("显示时钟", for: .normal)
+        showClockButton.backgroundColor = .systemPurple
+        showClockButton.setTitleColor(.white, for: .normal)
+        showClockButton.layer.cornerRadius = 8
+        showClockButton.addTarget(self, action: #selector(showClock), for: .touchUpInside)
+        
         showPopupButton.setTitle("显示基础弹窗", for: .normal)
         showPopupButton.backgroundColor = .systemBlue
         showPopupButton.setTitleColor(.white, for: .normal)
@@ -45,15 +52,23 @@ class ViewController: UIViewController {
         showMultiButtonPopupButton.layer.cornerRadius = 8
         showMultiButtonPopupButton.addTarget(self, action: #selector(showMultiButtonPopup), for: .touchUpInside)
         
+        view.addSubview(showClockButton)
         view.addSubview(showPopupButton)
         view.addSubview(showCustomPopupButton)
         view.addSubview(showMultiButtonPopupButton)
     }
     
     private func setupConstraints() {
+        showClockButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-140)
+            make.width.equalTo(240)
+            make.height.equalTo(54)
+        }
+        
         showPopupButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(-80)
+            make.top.equalTo(showClockButton.snp.bottom).offset(30)
             make.width.equalTo(200)
             make.height.equalTo(44)
         }
@@ -152,5 +167,10 @@ class ViewController: UIViewController {
         )
         
         PopupManager.shared.show(configuration: configuration, in: self)
+    }
+    
+    @objc private func showClock() {
+        let clockViewController = ClockViewController()
+        navigationController?.pushViewController(clockViewController, animated: true)
     }
 }
