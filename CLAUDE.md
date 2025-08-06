@@ -52,3 +52,4 @@
 - 配置为 iPhone 和 iPad 通用应用
 - 支持多种界面方向
 - UI约束布局请使用 Snapkit
+- 编码规范文档在 Docs 目录下

@@ -13,7 +13,7 @@
       "Bash(mv:*)",
       "Bash(xcodebuild:*)",
       "Bash(swift build)",
-      "Bash(swiftlint:*)"
+      "Bash(swiftlint:*)",
       "WebFetch(domain:developer.apple.com)",
       "WebFetch(domain:www.createwithswift.com)",
       "WebFetch(domain:messagekit.github.io)",

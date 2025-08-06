@@ -5,6 +5,7 @@ excluded:
 disabled_rules:
     - vertical_whitespace # 垂直空白行，连续空白行不能超过1行
     - trailing_whitespace # 每一个空行不能有空格，会与Xcode换行后自动对齐生成的空格冲突，建议排除掉加。
+    - trailing_newline # AI写代码时末尾如果有空行，发现AI自己修改会比价麻烦，且此条规则收益不大，可以排除掉。
     #- missing_docs # 缺失说明注释, 官方解释：”Public declarations should be documented.”， 公共声明应该被注释/标记。 在函数声明的时候， 一般情况下， 带public关键字的函数的注释只能用 “///”和 “/* /”来注释， 如果不带public关键字的函数只能用 “//”和 “/* */” 。这个属性应该禁用，没必要！！！
     #- function_parameter_count # 函数参数计数违例:函数应该有5个参数，多余会报错 函数参数个数， 函数参数数量(init方法除外)应该少点， 不要太多，swiftlint规定函数参数数量超过5个给warning， 超过8个直接报error。这个属性推荐使用， 由于简单就不举例了。注：function_parameter_count: error 这样并不能改变它的警告或错误，该属性不允许修改，但是可以禁用
     #- identifier_name   #命名规则必须按照驼峰原则（可能model中的某些字段与json字段命名冲突，建议排除掉）
