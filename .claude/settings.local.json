@@ -1,9 +1,23 @@
 {
   "permissions": {
     "allow": [
-      "Bash(xcodebuild -project TestClaudeCode.xcodeproj -scheme TestClaudeCode -configuration Debug -destination \"generic/platform=iOS\" -quiet clean build)",
-      "Bash(xcodebuild test -scheme TestClaudeCodeTests -destination 'platform=iOS Simulator,name=iPhone 16' -quiet)",
-      "Bash(swiftlint)"
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh issue comment:*)",
+      "Bash(gh auth:*)",
+      "Bash(grep:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(swift build)",
+      "Bash(swiftlint:*)",
+      "WebFetch(domain:developer.apple.com)",
+      "WebFetch(domain:www.createwithswift.com)",
+      "WebFetch(domain:messagekit.github.io)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": []
   }

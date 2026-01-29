@@ -7,7 +7,7 @@
 这是一个使用 Swift 构建的 iOS 应用程序，采用 UIKit 和 Storyboards。项目遵循标准的 iOS 应用架构：
 
 - **Bundle Identifier**: com.yupingtech.testcc.TestClaudeCode  
-- **部署目标**: iOS 18.5
+- **部署目标**: iOS 18.0
 - **Swift 版本**: 5.0
 - **Xcode 版本**: 16.4
 
@@ -23,7 +23,8 @@
 
 ### 构建和运行
 - 在Xcode中打开`TestClaudeCode.xcodeproj`
-- 尝试构建以测试代码是否有编译问题：`xcodebuild -project TestClaudeCode.xcodeproj -scheme TestClaudeCode -configuration Debug -destination "generic/platform=iOS" -quiet clean build  && echo '** BUILD SUCCEEDED **'`
+- 尝试构建以测试代码是否有编译问题：`xcodebuild -project TestClaudeCode.xcodeproj -scheme TestClaudeCode -configuration Debug -destination "generic/platform=iOS" 2>&1 | grep -E "(warning:|error:|BUILD SUCCEEDED|BUILD FAILED)"`
+
 
 ### 代码检查
 - SwiftLint仅在Debug构建时配置
@@ -51,3 +52,4 @@
 - 配置为 iPhone 和 iPad 通用应用
 - 支持多种界面方向
 - UI约束布局请使用 Snapkit
+- 编码规范文档在 Docs 目录下
